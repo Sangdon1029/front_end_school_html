@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 태그</title>
+    <style>
+        h2{ width: 200px;
+            margin:0 auto;
+        }
+        h2+img{
+            width: 500px;
+            height:500px;
+            display: block;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+     <h2>img 태그</h2>
+     <img src="ex2.jpg" alt="unsplash">
+        이미지 추천 : 1. pixabay 2. unsplash 3.https://www.pexels.com/ko-kr/ 
+        상업적 용도로 사용가능 출처 안 밝혀도 됨.
+        이거 없으면 사용 하면 안됨
+        폰트도 마찬가지
+     <img src="ex1.JPG" alt="주의사항">
+     <img src="img/a.jpg" alt="">
+     <img width="200px" height="auto" src="http://www.paullab.co.kr/images/ceo.png" alt="">
+     <br>일반적으로 width를 정했을대 height를 정해버리면 이미지가 뭉개져버린다 따라서 height를 없애버리면 auto를 default값으로 가져간다
+     <br>alt 는 대체문구를 지정하여 시각장애인 분들을 배려하는 용도
+             srcset 이란 기본 해상도가 변경되었을때 대체제로 사용되는 이미지를 사용하기 위해서 사용함
+     <!-- <img srcset="ex2.jpg" media="(min-width:800px)">
+     <img src="ex1.jpg" alt="변경될 그림" >
+     -->
+     <iframe width="1280" height="720" src="https://www.youtube.com/embed/qMwzWk81tVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     저작권 걸려 있는 경우
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/cbuZfY2S2UQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     회사 홈페이지도 가져올 수 있다
+     <iframe width="1280" height="720" src="http://www.paullab.co.kr/"></iframe>
+     남의 사이트에 있는거 그대로 가져올때 iframe 사용한다.
+     https:://사이트는 iframe을 막아놨다 
+        이유는: 아이디와 비밀번호를 해커들이 가져갈 수있어 막는것이 보안상으로 좋다
+
+</body>
+</html>
