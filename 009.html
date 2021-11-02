@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag</title>
+</head>
+<body>
+    <h1>Form tag</h1>
+    <p>1. form을 작성하면 action 과 method가 있다.</p>
+    <p>1.1. action은 submit을 눌렀을 때 이동할 사이트를 표시한다.</p>
+    <p>1.2. method는 post와 get 방식을 대표적으로 들 수 있다. </p>
+       1.2.1. post는 Id와 Pw를 querystring에 노출하지 않지만 get은 노출이 된다.<br>
+    1.2.2.post 대용량은 방식을 처리할 수 있고, get으로는 이미지같은 대용량 파일을 보낼 수 없다. <br>
+    1.2.3.get방식을 난독화나 암호화 등의 읽기 어려운 방식으로 만드는게 있다. <br>
+           따라서 우리는 단순히 페이지를 보여주는 것으로 끝내면 안된다.
+    <p>* wifisnipping = 범죄  와이파이를 사용하는 사람들의 패킷을 가져와서 볼수 있다.</p>
+    <form action="#" method="get">
+       <label for ="one">이름 :</label>
+       <input type="text" name="id" id="">
+       <label for ="two">비밀번호 :</label>
+       <input type="password" name="pw" id="">
+       <button type="submit">로그인</button>
+   </form>
+   <br>
+   <p>form 태그의 input type 종류</p>
+   <form>
+       <input type="text"><br>
+       <input type="password"><br>
+       <input type="date"><br>
+       <input type="time"><br>
+       <input type="range"><br>
+       <input type="color"><br>
+       <input type="radio"><br>
+       <input type="checkbox"><br>
+       <input type="file"><br>
+       <textarea name="name" rows="8" cols="80"></textarea>
+    </form>   
+  
+     <p>
+        아래 예제를 통해서 더 <strong>자세히</strong> 알아 보았다.
+        Form태그 안에 있는 input태그들의 name값들을 받아서 button을 눌렀을때 action(서버)로 method의 방식으로 이동시킨다
+        label 태그의 for는 id와 연결된다
+
+        Select 속성 : 
+        서버로 전될되는 값은 우리가 선택한 value 중 하나와 
+        select 의 name의 키값과 value값이 querystring으로 들어간다
+        -> /?device = galaxy
+
+        따라서 우리는 어떤 값이 querystring으로 넘어가는지 생각할 수 있어야 된다.
+     </p>    
+    <form action="#" method="get">
+        <select name="device" id="myDevice">
+            <option value="iphone">아이폰</option>
+            <option value="galaxy">갤릭서폰</option>
+            <option value="LG">Lg폰</option>
+        </select>
+    <button type="submit">선택</button>
+    </form>
+  
+   
+</body>
+</html>
