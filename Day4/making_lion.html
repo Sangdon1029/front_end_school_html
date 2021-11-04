@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radius</title>
+    <style>
+      .lion {
+        position: relative;
+        margin: 20px auto;
+        width: 600px;
+        height: 800px;
+      }
+      .color {
+        background: #eaa022;
+      }
+      [class*="ear"] {
+        width: 150px;
+        height: 150px;
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+        top: 400px;
+      }
+      .one,
+      .two {
+        position: relative;
+        border: 10px solid black;
+        display: inline-block;
+      }
+      .one {
+        right: -20px;
+        transform: rotate(-20deg);
+        margin-right: 120px;
+      }
+      .two {
+        transform: rotate(20deg);
+      }
+      .face {
+        position: absolute;
+        bottom: 0;
+        margin-left: 30px;
+        width: 400px;
+        height: 370px;
+        background: #db9a2b;
+        border: 10px solid black;
+        border-radius: 200px;
+      }
+      .eye_brow {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 300px;
+        height: 10px;
+        transform: translateY(100px) translateX(50px);
+      }
+      .lion .eye_brow_left,
+      .eye_brow_right {
+        background-color: black;
+        width: 90px;
+        height: 4px;
+        border-radius: 20px;
+        border: 6px solid black;
+      }
+      /* .lion .eye_brow_left{
+        }
+        .lion .eye_brow_right{
+        } */
+      .eye {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 200px;
+        height: 10px;
+        transform: translateX(100px) translateY(120px);
+      }
+      .lion .eye_left,
+      .eye_right {
+        background-color: black;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: black 8px solid;
+        border-radius: 50%;
+      }
+      .lion .eye_left {
+        transform: translateX(190px) translateY(-2px);
+      }
+      .lion .eye_right {
+        transform: translateX(-10px) translateY(-5px);
+      }
+
+      .mouth {
+        background-color: #db9a2b;
+        display: relative;
+        width: 200px;
+        height: 120px;
+        transform: translateX(100px) translateY(140px);
+      }
+      .mouth .mouth_left {
+        border: 8px solid black;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+        transform: translateX(20px);
+      }
+      .mouth .mouth_right {
+        border: 8px solid black;
+        border-left: 6px solid white;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+
+        transform: translateX(83px) translateY(-3px);
+      }
+      .nose {
+        background-color: black;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+        border-radius: 15px;
+        position: absolute;
+        transform: translateX(180px) translateY(10px);
+      }
+      .lion {
+        z-index: 2;
+        transform: translateX(-100px) translateY(-350px) rotate(-20deg);
+      }
+      .lion_body {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        width: 600px;
+        height: 150px;
+        border: 8px solid black;
+        border-radius: 100px;
+        transform: rotate(83deg);
+        z-index: -1;
+        bottom: -672px;
+        left: -31px;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lion">
+      <div class="one color left_ear"></div>
+      <div class="two color right_ear"></div>
+      <div class="face color">
+        <div class="eye_brow">
+          <div class="eye_brow_left"></div>
+          <div class="eye_brow_right"></div>
+        </div>
+        <div class="eye">
+          <div class="eye_left"></div>
+          <div class="eye_right"></div>
+        </div>
+        <div class="mouth">
+          <div class="mouth_left"></div>
+          <div class="mouth_right"></div>
+        </div>
+        <div class="nose"></div>
+      </div>
+      <div class="lion_body">
+        <div class="body_shape"></div>
+        <div class="body_shape_2"></div>
+        <div class="body_shape_3"></div>
+      </div>
+    </div>
+  </body>
+</html>
