@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slot_machine</title>
+    <style>
+        @keyframes 당기시오 {
+            0%{
+                transform: translateY(-1000px);
+            }
+            10%{
+                transform: translateY(-900px);
+            }
+            20%{
+                transform: translateY(-800px);
+            }
+            30%{
+                transform: translateY(-700px);
+            }
+            40%{
+                transform: translateY(-600px);
+            }
+            50%{
+                transform: translateY(-500px);
+            }
+            60%{
+                transform: translateY(-400px);
+            }
+            70%{
+                transform: translateY(-300px);
+            } 
+            80%{
+                transform: translateY(-200px);
+            } 
+            90%{
+                transform: translateY(-100px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        .box_1{
+
+            display: flex;
+            margin:50px auto;
+            border-radius: 40px;
+            width: 700px;
+            height: 500px;
+            background-color: #f65759 ;
+            box-shadow: 1px 1px 3px 2px black;
+        }
+        .wrap{
+            position: relative;
+            border-radius: 20px;
+            padding-top: 10px;
+            margin:100px auto;
+            width: 500px;
+            height: 200px;
+            border:1px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            box-shadow: 2px 2px 1px 2px rgba(255, 235, 205, 0.5);
+        }
+        .wrap ul{
+            color: white;
+            border-radius: 20px;
+            line-height: 100px;
+            height: 80px;
+            overflow: hidden;
+            font-size: 70px;
+            list-style: none;
+            background-color: #371140;
+            box-shadow: inset 0 0 10px 10px black;
+        }
+        .wrap::before{
+            border-radius: 10px;
+            top: 230px;
+            width: 400px;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            box-shadow: inset 0 0 10px 10px black;
+        }
+        .wrap::after{
+            border-radius: 10px;
+            top: 325px;
+            width: 400px;
+            box-shadow: inset 0 0 10px 10px black;
+            content: '';
+            display: inline-block;
+            position: absolute;
+        }
+        .wrap .one_items {
+            animation: 당기시오 1s infinite;
+        }
+        .wrap .two_items{
+            animation: 당기시오 1.1s infinite;
+        }
+        .wrap .three_items{
+            animation: 당기시오 0.9s infinite;
+        }
+        button{
+            box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.5);
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: burlywood;
+            border: 1px solid blanchedalmond;
+            margin:30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box_1">
+    <div class="wrap">
+        <ul id="one">
+            <li id="test" class="one_items">1</li>
+            <li id="test" class="one_items">2</li>
+            <li id="test" class="one_items">3</li>
+            <li id="test" class="one_items">4</li>
+            <li id="test" class="one_items">5</li>
+            <li id="test" class="one_items">6</li>
+            <li id="test" class="one_items">7</li>
+            <li id="test" class="one_items">8</li>
+            <li id="test" class="one_items">9</li>
+            <li id="test" class="one_items">10</li>
+            <li id="test" class="one_items">1</li>
+        </ul>
+        <ul class="two">
+            <li id="test2" class="two_items">1</li>
+            <li id="test2" class="two_items">2</li>
+            <li id="test2" class="two_items">3</li>
+            <li id="test2" class="two_items">4</li>
+            <li id="test2" class="two_items">5</li>
+            <li id="test2" class="two_items">6</li>
+            <li id="test2" class="two_items">7</li>
+            <li id="test2" class="two_items">8</li>
+            <li id="test2" class="two_items">9</li>
+            <li id="test2" class="two_items">10</li>
+            <li id="test2" class="two_items">1</li>
+        </ul>
+        <ul class="three">
+            <li id="test3" class="three_items">1</li>
+            <li id="test3" class="three_items">2</li>
+            <li id="test3" class="three_items">3</li>
+            <li id="test3" class="three_items">4</li>
+            <li id="test3" class="three_items">5</li>
+            <li id="test3" class="three_items">6</li>
+            <li id="test3" class="three_items">7</li>
+            <li id="test3" class="three_items">8</li>
+            <li id="test3" class="three_items">9</li>
+            <li id="test3" class="three_items">10</li>
+            <li id="test3" class="three_items">1</li>
+        </ul>
+    </div>
+    </div>
+    <button id="stop_loop" class="btn" type="button">숫자들 수평 정렬 어캐하지?</button>
+    <script>
+         const stop_loop  = document.getElementById('stop_loop');
+         stop_loop .addEventListener('click', () => {
+            const animations = document.querySelectorAll('#test, #test3, #test2');
+            animations.forEach(animation => {
+            const running = animation.style.animationPlayState || 'running';
+            animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+            })
+        });
+    </script>
+    </body>
+</html>
