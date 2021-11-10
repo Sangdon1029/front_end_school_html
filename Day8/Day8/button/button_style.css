@@ -1,0 +1,151 @@
+@keyframes 흔들{
+    from{
+        transform: rotate(-20deg);
+    }
+    to{
+        transform: rotate(30deg)
+    }
+}
+@keyframes 흔들1{
+    from{
+        transform: rotate(60deg);
+    }
+    to{
+        transform: rotate(-20deg)
+    }
+}
+@keyframes 흔들2{
+    from{
+        transform: rotate(-45deg);
+    }
+    to{
+        transform: rotate(45deg)
+    }
+}
+@keyframes 흔들3{
+    from{
+        transform: rotate(-50deg);
+    }
+    to{
+        transform: rotate(50deg)
+    }
+}
+@keyframes 흔들4{
+    from{
+        transform: rotate(-40deg);
+    }
+    to{
+        transform: rotate(20deg)
+    }
+}
+@keyframes 흔들5{
+    from{
+        transform: rotate(-60deg);
+    }
+    to{
+        transform: rotate(60deg)
+    }
+}
+/* 
+.btn::before {
+    content: '';
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    width: inherit;
+    height: inherit;
+    transform-origin: right;
+}
+
+button:hover::before{
+    cursor: pointer;
+    position: absolute;
+    content: '';
+    top:-2px;
+    left:-2px;
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    color: lawngreen;
+    width: 100px;
+    height: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transform-origin: bottom ;
+    transition: all 3s ease;
+} */
+
+.btn{
+    margin:80px auto;
+    border-radius: 5px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    perspective: 200px;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn:hover{
+    box-shadow: 1px 1px 2px 3px rgba(0,2,0,0.5);
+    background-color: turquoise;
+    transition: all 1s ease;
+    border-radius: 20px;
+}
+.btn:hover div{
+    position: relative;
+    transition: all 0.5s ease;
+    width: 10%;
+}
+.btn:hover .f{
+    transform: rotateX(10deg);
+    color: tomato;
+    animation: 흔들1 0.5s infinite;
+    animation-direction: alternate;
+}
+.btn:hover .s{
+    transform: rotateX(14deg);
+    color: gold;
+    animation: 흔들2 0.5s infinite;
+    animation-direction: alternate-reverse;
+}
+.btn:hover .t{
+    transform: rotateX(11deg);
+    color: green;
+    animation: 흔들3 0.5s infinite;
+    animation-direction: alternate;
+}
+.btn:hover .fo{
+    color: blue;
+    animation: 흔들5 0.5s infinite;
+    animation-direction: alternate-reverse;
+}
+.btn:hover .fi{
+    transform: rotateX(13deg);
+    color: blueviolet;
+    animation: 흔들4 0.5s infinite;
+    animation-direction: alternate-reverse;
+}
+.btn:hover .si{
+    transform: rotateX(12deg);
+    animation: 흔들1 0.5s infinite;
+    animation-direction: alternate-reverse;
+    color: rgb(150, 58, 42);
+}
+.btn:hover .se{
+    transform: rotateX(15deg);
+    color: rgb(94, 48, 40);
+    animation: 흔들 0.5s infinite;
+    animation-direction: alternate
+}
+.btn:hover .se::before{
+    content: '';
+    width: inherit;
+    height: inherit;
+    top:0;
+    left: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    background-color: khaki;
+}
