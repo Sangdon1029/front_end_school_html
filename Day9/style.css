@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#app{
+    font-family: GmarketSansBold;
+    background-color:#5B2386;
+    color: white;
+    text-align: center;
+    padding-bottom: 70px;
+}
+.tit-law{
+    position: relative;
+    display: inline-block;
+    margin-top: 194px;
+}
+
+.tit-law .img-tit{
+    position: relative;
+    z-index: 10;
+}
+/* 가상요소니까 디스플레이 속성 줘야 된다 */
+.tit-law::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(/images-law/title_bg.png);
+    background-size: 225px;
+    background-repeat: no-repeat;
+    top:50%;
+    left: 50%;
+    width: 225px;
+    height: 255px;
+    margin: -112px 0 0 -112px;
+}
+/* 픽셀 쓸때 소수점 자리는 잘 안쓴다
+브라우저마다 올리는 브라우저 내리는 브라우저 반올리하는 브라우저가 다 달라서
+그래서 소수점은 쓰지 않는다. 
+transform: translate(-50%, -50%); 높이 값을 모르는 경우는 이렇게 하는게 좋다*/
+.img-txt{
+    max-width: 486px;
+   /* 이게 내가 원했던거야 */
+    margin: 125px auto 78px;
+}
+.txt-desc{
+    margin:0 auto 102px;
+    width: 475px;
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+}
+.txt-desc .tit-desc{
+    font-size: 24px;
+    line-height: 24px;
+}
+.txt-desc::before, .txt-desc::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 37px;
+    height: 32px;
+    top: 0;
+    top: 50%;
+    margin-top: -16px;
+}
+.txt-desc::before{
+    background-image: url(/images-law/txt-left.png);
+    left: 0;
+}
+.txt-desc::after{
+    background-image: url(/images-law/txt-right.png);
+    right: 0;
+}
+.cont-inp, .cont-result{
+    font-size:24px;
+    line-height: 24px;
+}
+.cont-inp .txt-wannbe{
+    margin-bottom: 27px;
+}
+.cont-inp .txt-time input{
+    margin-bottom: 115px;
+}
+.cont-inp .txt-wannbe input, .cont-inp .txt-time input{
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    font-size: 24px;
+    border: none;
+    text-align: center;
+    font-family: GmarketSansBold;
+}
+.btn-exc::after{
+    display: block;
+    content: "";
+    width: 64px;
+    height: 72px;
+}
+.cont-inp .btn-exc, 
+.cont-result .btn-go, 
+.cont-result .btn-share{
+    /* 패딩값이랑 마진값은 요소의 값에 영향을 줘서 맨위로 빼둔다 */
+    padding:21px 49px;
+    margin-bottom: 147px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 56px;
+    text-align: center;
+    color: #5B2386;
+    background-color: #FCEE21;
+    font-family: GmarketSansBold;
+    cursor: pointer;
+    border:none;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.cont-result .txt-wannbe,
+ .cont-result .txt-time{
+    line-height: 72px;
+    margin-bottom: 17px;
+}
+.cont-result .txt-wannbe strong,
+.cont-result .txt-time strong{
+    vertical-align: top;
+    font-size: 72px;
+    font-family: GmarketSansBold;
+}
+.cont-result .txt-time{
+    margin-bottom: 127px;
+}
+.cont-result .btn-share{
+    margin-left: 18px;
+    background-color: #ffff;
+}
+.cont-footer .img-footer{
+    width: 125px;
+    height: 25px;
+    margin: 0 auto 20px;
+}
+.cont-footer .txt-footer{
+    font-size: 12px;
+    line-height: 17px;
+    width: 365px;
+    height: 34px;
+    margin:0 auto;
+}
+
