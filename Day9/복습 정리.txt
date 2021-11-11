@@ -1,0 +1,91 @@
+1. 레티나(Retina)
+Retina(망막)디스플레이란 2012년 Apple에서 마케팅 용어로 사용을 시작했다.
+첫번째로 300 PPI(Pixel Per Inch)를 넘어가면 인간의 망막으로는 Pixel을 볼 수 없다고 말하면서 사용을 시작하였지만
+현재는 Apple에서 만 사용 하는 단어라고 한다.
+
+
+2. 1px에 들어가는 Pixel이 많아지면 왜 이미지가 작아지는가?
+그림 참고
+내가 이해한게 맞다면 픽셀 수가 많아지면 그만큼 구현할 수 있는 픽셀당 이미지 크기가 줄어서 그런건가?
+아직도 이해가 되지 않는다.
+좀더 많은 공부 필요
+
+3.mediaquery pixel ratio
+
+화면(출력 장치)의 픽셀 비율을 정하게 된다. 
+css의 1px 안에 들어가는 <-(디바이스의 스크린) 픽셀의 숫자를 값으로 합니다.
+
+@media screen and (-webkit-device-pixel-ratio : 2){ 
+}
+이런식으로 사용을 합니다.
+
+참고 정리가 잘 되어 있다.
+https://feel5ny.github.io/2018/05/13/mediaQuery_01/
+자신의 화면 비율 알아보기
+https://johankj.github.io/devicePixelRatio/
+
+4. view port /Device Resolution
+view port : 웹페이지가 사용자에게 어떻게 보여지는 영역을 말합니다.
+Device Resolution : 해상도를 말합니다.
+
+ Device viewport size 알려주는 사이트
+https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html?lang=en
+
+구글에서는 이렇게 디자인 합니다. 디자인을 어떻게 해야 될지 모르겠으면 참고.
+https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins
+
+4. 
+마진 곂침현상 margin collapsing 
+해결법: display: inline-block 값을 줘야 된다
+        요소와 요소 끼리 margin을 주게 될 경우 직접적으로 연관되어 있는 곳에 마진을 주는 것으로 하자.
+         한마디로 가장 바깥의 부모들에게 간격을 줘서 빈공간을 마련해야 된다는 것이다.
+
+
+======================================
+생각해보기
+p태그로 개행하면 스크린리더가 br보다 오래 쉬기 때문에 쉼표가 있는 자리나, 개행해야겠다고 생각하는 곳에 br태그를 넣는 것이 오히려 웹 접근성을 높일 수 있다는 얘기가 나왔어요.
+ 긴 문장을 짧게 조각내어 p로 나눠버리면 계속해서 스크린리더가 오래 쉬는 상황이 발생될 수 있는거죠.
+
+
+======================
+OOCSS (Object Oriented CSS)
+
+OOCSS란 무엇인가?
+CSS코드를 역할에 따라 분리를 해야 된다.
+중복을 최소화 하고 캡슐화를 원칙으로 하는 방법이다.
+구조와 스킨구분 지을 수 있다..
+구조는 캐릭터의 뼈대(레이아웃)를 담당하는 속성들 width, height,padding,margin등 이 있으며,
+
+스킨으로는 웹페이지의 구조에 영향을 미칠 수 없는 속성들 font , color ,background,border등 이 있다 
+
+SMACSS(Scalable and Modular Architecture for CSS)
+이름도 길다 방식도 길다
+[ "베이스", "레이아웃","모듈","스테이트","테마"]
+1- 베이스 
+전반적으로 사용될 폰트(패밀리 사이즈 reset스타일 img기본스타일)
+
+2.레이아웃
+헤더 메인영역 푸터 사이드바와 같이 웹사이트를 구성할 때 변하지 않을 영역들을 모아둔다.
+
+3. 모듈
+레이아웃 내에서 사용 될 요소들을 말한다. 주의할 점으로 ID선택자를 사용하지 않아야 된다.
+
+4.스테이트
+기존 스타일을 덮어쓰거나 확장하는데 사용되는 스타일이다.
+레이아웃이나 모듈에 둘다 적용이 가능하며, 자바스크립트로 필요할때 넣었다 뺐다 할 수 있다.
+클래스 앞에 is라는 접두사를 넣어서 사용한다.
+
+
+BEM(Block Element Modifier)표기법
+
+Block은 어디서나 사용이 가능해야 하므로 클래스 네이밍 목적이 명확해야 된다
+또한 여러 단어를 사용할경우 하이픈 (케반케이스)를 사용한다.
+
+Element는 block을 구성하는 요소들로 block에 종속되어야 한다.
+block의 클래스 이름을 상속받고 element의 클래스 이름을 언더바 두개로 접두사로 하여 사용한다
+
+Modifier
+요소의 상태를 표현한다
+표기법으로는 hyphen을 --두개 사용하여 표시한다
+
+BEM 표기법은 코드가 뭘 하는지 파악이 쉽지만 이름이 길어지고 복잡해진다.
