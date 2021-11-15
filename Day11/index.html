@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/all.css">
+</head>
+
+<body>
+    <div class="뒷배경">
+        <section id="wrap">
+            <header class="login">로그인 또는 회원가입
+                <button type="button" class="btn1"><img class="login__close"src="/img/close.png" alt="취소"></button>
+            </header>
+            
+            <form class="log-info">
+                <fieldset class="log-info__input">
+                    <legend class="log-info__tit">위니브에서 여러분의 궁금증을 해결하세요!:)</legend> 
+                    <input type="text" name="id" class="log-info__id" placeholder="아이디" required>
+                    <input type="text" name="pw" class="log-info__pw" placeholder="비밀번호" required>
+                    <div class="log-info__change-check">
+                        <input type="checkbox" id="logged" class="log-info__check"> 
+                        <label for="logged">로그인 상태 유지</label>
+                    </div>
+                    <button type="submit" class="log-info__sub">로그인</button>
+                    <div class="log-info__wrap">
+                        <a href="#" class="log-info__sign-up">회원가입</a>
+                        <a href="#" class="log-info__find-id">아이디</a>
+                        <a href="#" class="log-info__find-pw">비밀번호 찾기</a>
+                    </div>
+                </fieldset>
+            </form>
+            <footer class="another-login">
+                <p class="another-login__or">또는</p>
+                <a href="#none" class="another-login__goo">구글 계정으로 로그인</a>
+                <a href="#none" class="another-login__face">페이스북 계정으로 로그인</a>
+                <a href="#none" class="another-login__naver">네이버 계정으로 로그인</a>
+                <a href="#none" class="another-login__kakao">카카오톡 계정으로 로그인</a>
+            </footer>
+        </section>
+    </div>
+
+    <div id="wrap_1">
+        <header class="header_1">
+            <li class="logo_2">Logo</li>
+            <nav class="menu_2">
+                <li class="nav-item_2">Skill
+                    <ul class="sub-menu_2">
+                        <li class="sub-menu_2-item">one</li>
+                        <li class="sub-menu_2-item">two</li>
+                        <li class="sub-menu_2-item">three</li>
+                    </ul>
+                </li>
+                <li class="nav-item_2">Blog</li>
+                <li class="nav-item_2">Contact</li>
+                <li class="nav-item_2">What</li>
+            </nav>
+            <i class="fas fa-hamburger hide"></i>
+        </header>
+        <main class="main_2">
+            <article class="article_2"> <button class="btn2">눌러주세요</button></article>
+            <aside class="aside">  <h3>section1</h3><br><br><br><h3>section2</h3><br><br><br><h3>section3</h3><br><br></aside>
+        </main>
+        <footer class="footer">
+        </footer>
+    </div>
+    <!-- BEM방식 적용 중 -->
+    
+
+
+    <script src="style/main.js"></script>
+</body>
+</html>
