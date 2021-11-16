@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLONE</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+         body {
+            display: flex;
+        }
+
+        header {
+            flex: 1;
+        }
+
+        .section-board {
+            margin: 330px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 50px;
+            transform: rotateY(26deg)rotateX(53deg)rotateZ(-4deg);
+        }
+
+        .boarder-item {
+            width: 200px;
+            height: 200px;
+            top: 0;
+            right: 0;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .boarder-item:hover {
+            cursor: pointer;
+            /* transform: translate( 10px, -20px) ; */
+            top: -40px;
+            right: -20px;
+        }
+        .boarder-item::after {
+            transition: all .4s ease ;
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgba(105, 105, 105, 0.16);
+            width: inherit;
+            height: inherit;
+            top:0px;
+            right:20px;
+            z-index: -1;
+            /* 트랜스폼 되는 순가 z index가 무시가 된다 */
+        }
+        .boarder-item:hover::after {
+            top: 37px;
+            right: 46px;
+            z-index: -1;
+        }
+      
+
+        .boarder-item:nth-child(5n){
+            background-color: crimson;
+        }
+        .boarder-item:nth-child(5n-1){
+            background-color: darkcyan;
+        }
+        .boarder-item:nth-child(5n-2){
+            background-color: blue;
+        }
+        .boarder-item:nth-child(5n-3){
+            background-color: hotpink;
+        }
+        .boarder-item:nth-child(5n-4){
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="section-board">
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+        <div class="boarder-item"></div>
+    </div>
+</body>
+</html>
